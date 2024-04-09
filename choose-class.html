@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Class</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap");
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .button-family {
+        --color: rgba(30, 30, 30);
+        --bgColor: rgba(245, 245, 245);
+        min-height: 90vh;
+        display: grid;
+        align-content: center;
+        gap: 2rem;
+        padding: 2rem;
+        font-family: "Exo 2", sans-serif;
+        color: var(--color);
+        background: var(--bgColor);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      ol {
+        width: min(60rem, 90%);
+        margin-inline: auto;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        list-style: none;
+        counter-reset: stepnr;
+      }
+
+      li:nth-child(6n + 1) {
+        --accent-color: #b8df4e;
+      }
+      li:nth-child(6n + 2) {
+        --accent-color: #4cbccb;
+      }
+      li:nth-child(6n + 3) {
+        --accent-color: #7197d3;
+      }
+      li:nth-child(6n + 4) {
+        --accent-color: #ae78cb;
+      }
+      li:nth-child(6n + 5) {
+        --accent-color: #7dc7a4;
+      }
+      li:nth-child(6n + 6) {
+        --accent-color: #f078c2;
+      }
+
+      ol li {
+        counter-increment: stepnr;
+        width: 18rem;
+        --borderS: 2rem;
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: calc(var(--borderS) + 2rem);
+        position: relative;
+      }
+      ol li::before,
+      ol li::after {
+        inset: 0;
+        position: absolute;
+        border-radius: 50%;
+        border: var(--borderS) solid var(--bgColor);
+        line-height: 1.1;
+      }
+      ol li::before {
+        content: counter(stepnr);
+        color: var(--accent-color);
+        padding-left: 3rem;
+        font-size: 12rem;
+        font-weight: 700;
+        overflow: hidden;
+      }
+
+      ol li::after {
+        content: "";
+        filter: drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0, 0, 0, 0.75))
+          blur(5px);
+      }
+
+      ol li > * {
+        width: 7.5rem;
+      }
+      ol li .icon {
+        font-size: 2rem;
+        color: var(--accent-color);
+        text-align: center;
+      }
+      ol li .title {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      ol li .descr {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+
+      .credits {
+        margin-top: 2rem;
+        text-align: right;
+      }
+      .credits a {
+        color: var(--color);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="grid-template-columns: 14rem auto">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="images/logo.png" alt="" />
+            <h2>UN <span class="danger">YA</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="./Index.html">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">person_add</span>
+            <h3>Add Student</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">group_add</span>
+            <h3>Add teacher</h3>
+          </a>
+          <a href="./Index.html" class="active">
+            <span class="material-icons-sharp">meeting_room</span>
+            <h3>Class</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">payments</span>
+            <h3>Fee Manager</h3>
+          </a>
+        </div>
+      </aside>
+      <!----------------End OF Aside--------------->
+      <main style="display: flex; justify-content: center; align-items: center">
+        <section class="button-family">
+          <h1>Choose class</h1>
+          <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ol>
+          <div class="credits">
+            <a
+              target="_blank"
+              href="https://www.freepik.com/premium-vector/vector-infographic-design-template-with-icons-8-options-steps_10571883.htm"
+              >inspired by</a
+            >
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

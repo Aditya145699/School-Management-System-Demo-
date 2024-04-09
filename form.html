@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./form.css" />
+  </head>
+  <body>
+    <div class="container" style="grid-template-columns: 14rem auto">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="images/logo.png" alt="" />
+            <h2>UN <span class="danger">YA</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="./Index.html">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="#" class="active">
+            <span class="material-icons-sharp">person_add</span>
+            <h3>Add Student</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">group_add</span>
+            <h3>Add teacher</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">meeting_room</span>
+            <h3>Class</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp">payments</span>
+            <h3>Fee Manager</h3>
+          </a>
+        </div>
+      </aside>
+      <!----------------End OF Aside--------------->
+      <main style="display: flex; justify-content: center; align-items: center">
+        <div class="form-container">
+          <div class="text">Add Student Form</div>
+          <form action="#">
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">First Name</label>
+              </div>
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Last Name</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Email Address</label>
+              </div>
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Date of Birth</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Grade Level</label>
+              </div>
+              <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">Parent/Guardian Name</label>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="input-data textarea">
+                <textarea rows="8" cols="80" required></textarea>
+                <br />
+                <div class="underline"></div>
+                <label for="">Additional Notes</label>
+              </div>
+            </div>
+            <div class="form-row submit-btn">
+              <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="Submit" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
